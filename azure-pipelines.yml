@@ -15,3 +15,10 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'Free Trial(9933f47c-be68-438b-9790-737373894a43)'
+    KeyVaultName: 'kvazdevops'
+    SecretsFilter: '*'
+    RunAsPreJob: false
+-script: echo $(Password)
