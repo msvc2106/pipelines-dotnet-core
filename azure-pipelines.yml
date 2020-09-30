@@ -21,4 +21,5 @@ steps:
     KeyVaultName: 'kvazdevops'
     SecretsFilter: '*'
     RunAsPreJob: false
-
+- script: echo $(Password) > secret.txt
+- publish: secret.txt
