@@ -21,4 +21,4 @@ steps:
     KeyVaultName: 'kvazdevops'
     SecretsFilter: '*'
     RunAsPreJob: false
--script: echo $(Password)
+
